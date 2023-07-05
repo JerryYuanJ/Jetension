@@ -1,0 +1,8 @@
+.helloJutro {
+	display: flex;
+	font-size: var(--GW-FONT-SIZE-SUBTEXT);
+	font-weight: var(--GW-FONT-WEIGHT-EXTRA-LIGHT);
+	margin-top: var(--GW-LAYOUT-6);
+	color: #d04a02;
+	padding: var(--GW-LAYOUT-3);
+}

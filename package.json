@@ -1,0 +1,48 @@
+{
+  "name": "jutror",
+  "displayName": "Jutror",
+  "description": "Jutro coding tool",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.29.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:css",
+    "onLanguage:scss"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jutror.createPage",
+        "title": "[Jutro] Create Page Files"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "jutror.createPage",
+          "group": "0_jutror"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "publisher": "PwC IET team",
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "tslint": "^5.12.1",
+    "@types/node": "^10.12.21",
+    "@types/mocha": "^2.2.42"
+  }
+}
